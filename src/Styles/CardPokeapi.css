@@ -1,0 +1,138 @@
+.card__container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: rgb(251, 251, 251);
+  width: 25rem;
+  min-height: 30rem;
+  padding-inline: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.7rem;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  min-height: 25rem;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(51, 100%, 50%),
+    hsl(51, 95%, 66%)
+  );
+  clip-path: circle(30rem at 95% -60%);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__id,
+.card__hp {
+  background-color: #f5f6f7;
+  border: 1px solid #f5f6f7;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  margin-block: 1rem 0;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+:is(.card__id, .card__hp) span {
+  font-size: 1.03rem;
+  font-weight: 400;
+}
+
+:is(.card__id, .card__hp):hover {
+  background-color: hsl(60, 89%, 51%);
+  border: 1px solid rgb(240, 240, 18);
+}
+
+h3 {
+  font-size: 0.95rem;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgb(64, 64, 64);
+}
+
+h5 {
+  font-weight: 400;
+  color: rgb(118, 118, 118);
+}
+
+img {
+  width: 100%;
+  position: relative;
+  bottom: 2.5rem;
+  border-radius: 10%;
+}
+
+.card__name-pokemon {
+  position: relative;
+  bottom: 3rem;
+  text-transform: capitalize;
+}
+.card__basic-dates {
+  position: relative;
+  display: flex;
+  bottom: 2rem;
+  justify-content: space-around;
+}
+
+.card__type-pokemon,
+.card__ability-pokemon {
+  background-color: hsl(51, 100%, 50%);
+  padding: 0.2rem 1.5rem;
+  border-radius: 2rem;
+  border-radius: 1rem;
+  color: rgb(255, 255, 255);
+  text-transform: capitalize;
+}
+
+.card__characteristics {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+.card__stats {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.change {
+  margin-block: 2.5rem 2rem;
+  padding: 0.6rem 1rem;
+  min-width: 100%;
+  border-radius: 1rem;
+  background-color: hsla(51, 100%, 50%, 0.95);
+  border: 1px solid hsla(51, 100%, 50%, 0.95);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+}
+
+.change:hover {
+  background-color: hsl(51, 100%, 50%);
+  border: 1px solid rgb(255, 217, 2);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
